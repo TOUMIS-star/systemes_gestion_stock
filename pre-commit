@@ -1,0 +1,9 @@
+#!/bin/sh
+echo "Lancement des tests en cours"
+mvn test
+if [$? -ne 0]; then
+echo "Echec des tests"
+exit 1
+fi
+echo "Tests réussis"
+exit 0
