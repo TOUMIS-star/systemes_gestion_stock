@@ -1,25 +1,25 @@
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StockTest{
     @Test
-    public void test Ajouter produit(){
+    public void testAjouterProduit(){
         Stock stock= new Stock();
-        produit p = new produit ("clavier",5,15000);
-        stock.ajouterproduit (p);
-        assertEquals(0,stock.getproduit().size());
+        Produit p = new Produit("clavier",5,15000);
+        stock.ajouterProduit (p);
+        assertEquals(1, stock.getProduits().size());
         } 
         @Test
-        public void testRetirerproduit(){
+        public void testRetirerProduit(){
             Stock stock = new Stock();
-            produit p = new produit ("souris",2,5000);
-            Stock.ajouterproduit(p)
-            Stock.retirerproduit(p)
-            assertEquals (0,getproduits().size());
+            Produit p = new Produit ("souris",2,5000);
+            stock.ajouterProduit(p);
+            stock.retirerProduit(p);
+            assertEquals (0, stock.getProduits().size());
         }
         @Test
-        public void testStockvide AuDepart(){
+        public void testStockvideAuDepart(){
             Stock stock = new Stock();
-            assertEquals(0,stock.getproduit().size());
+            assertEquals(0, stock.getProduits().size());
         }
 }
